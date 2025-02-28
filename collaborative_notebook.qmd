@@ -38,13 +38,13 @@ format:
 
 **Best K-pop Groups:**
 
-1.  BTS (3rd generation)
-2.  Stray Kids (4th generation)
+1.  BTS (3^rd^ generation)
+2.  Stray Kids (4^th^ generation)
     1.  3RACHA (Stray Kids subunit)
 
 \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2Lr7Sck>)
 
-<!-- hello what's up -->
+<!-- hello what's up-->
 
 ```{r}
 #| label: performing set-up tasks
