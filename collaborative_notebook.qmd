@@ -30,6 +30,22 @@ format:
 
 *hello*
 
+**hola**
+
+-   List item
+
+    -   List item 2
+
+        -   Listen item 3
+
+1.  Ordered list item 1
+2.  Ordered list item 2
+    1.  Ordered list item 2 sub-item 1
+
+\[best choreography\] (<https://www.youtube.com/watch?v=FKJk2Lr7Sck>)
+
+still need HTML-style comment
+
 ```{r}
 #| label: performing set-up tasks
 library(apaquarto)
