@@ -63,15 +63,18 @@ data <- read_csv("data.csv") #need to make dataset
 
 ```{r}
 #| label: executing non-setup R code
+#assigned values to objects
 x <- 10
 y <- 20
 z <- x + y
 
+#constucted a data frame
 df <- data.frame(
   Name = c("Andres", "Blanca", "Carlos"),
   Age = c(23, 19, 45),
   Score = c(90, 85, 99))
 
+#defined functions
 calculate_mean <- function(numbers) {
   mean(numbers)}
 
