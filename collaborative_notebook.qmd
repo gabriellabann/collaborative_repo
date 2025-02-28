@@ -22,6 +22,14 @@ format:
     documentmode: man
 ---
 
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+*hello*
+
 ```{r}
 #| label: performing set-up tasks
 library(apaquarto)
