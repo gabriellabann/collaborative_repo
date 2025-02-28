@@ -79,7 +79,7 @@ mean_score <- calculate_mean(df$Score)
 mean_score
 ```
 
-objectives I'm (GB) looking to meet: (1) Create publication-quality plots using theme and labs layers, (2) perform simple hypothesis testing analyses for multiple data types (maybe), (3) present and interpret statistics in manuscript narrative (maybe), (4) create and effectively use code chunks following best practices, (5) use code chunks to set up a quarto document, (6) render publication-quality tables, figures, and images from code chunks, (7) execute descriptive analyses and/or hypothesis testing in code chunks, (8) use inline R variables to replace static text, (9) run inline R functions to render dynamic data-dependent text, (10) use knitr and quarto to produce an APA7 formatted 1-click PDF manuscript (should get me the 6 unique points since none have been met LOL)
+objectives I'm (GB) looking to meet: 22, 23, 24, 25, (26 already met), 27, 28, 29, 30
 
 ## Quarto
 
