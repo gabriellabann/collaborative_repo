@@ -84,6 +84,17 @@ mean_score
 
 objectives I'm (GB) looking to meet: 22, 23, 24, 25, (26 already met), 27, 28, 29, 30
 
+```{r}
+#to do: 
+#render publication-quality table, figure, and image
+#execute descriptive analysis and/or hypothesis testing in code chunks
+#format to compose academic manuscript
+#use inline R variables to replace static text
+#run inline R function to render dynamic data-dependent text
+#use knitr and quarto to produce apa7 pdf
+
+```
+
 ## Quarto
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
