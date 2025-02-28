@@ -44,7 +44,7 @@ format:
 
 \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2Lr7Sck>)
 
-still need HTML-style comment
+<!-- hello what's up -->
 
 ```{r}
 #| label: performing set-up tasks
