@@ -1,8 +1,29 @@
 ---
 title: "collaborative_notebook"
-format: pdf
-editor: visual
+date: "2-21-2024"
+shorttitle: "Keya and Gabriella"
+author:
+  - name: Keya Chinnam and Gabriella Bann
+    #corresponding: true
+    affiliations:
+      - name: University of Chicago
+        #department: Department of the Social Sciences -- Psychology
+abstract: "Abstraction"
+keywords: [keya, science]
+author-note:
+  disclosures:
+    conflict of interest: The author has no conflict of interest to declare.
+  gratitude: "shout out to the real ones"
+documentmode: jou
+format:
+  apaquarto-docx: default
+  apaquarto-html: default
+  apaquarto-pdf:
+    documentmode: man
 ---
+
+library(apaquarto)
+
 
 ## Quarto
 
@@ -13,6 +34,7 @@ Quarto enables you to weave together content and executable code into a finished
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
+library(apaquarto)
 1 + 1
 ```
 
