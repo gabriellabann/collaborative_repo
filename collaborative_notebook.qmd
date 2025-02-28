@@ -39,6 +39,10 @@ library(ggplot2)
 set.seed(123)
 
 data <- read_csv("data.csv") #need to make dataset
+
+#need to also source an R script
+
+#not sure if properly set default chunk options...
 ```
 
 ```{r}
