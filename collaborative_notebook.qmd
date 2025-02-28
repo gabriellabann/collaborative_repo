@@ -23,6 +23,7 @@ format:
 ---
 
 ```{r}
+#| label: performing set-up tasks
 library(apaquarto)
 library(tidyverse)
 library(ggplot2)
@@ -30,6 +31,24 @@ library(ggplot2)
 set.seed(123)
 
 data <- read_csv("data.csv") #need to make dataset
+```
+
+```{r}
+#| label: executing non-setup R code
+x <- 10
+y <- 20
+z <- x + y
+
+df <- data.frame(
+  Name = c("Andres", "Blanca", "Carlos"),
+  Age = c(23, 19, 45),
+  Score = c(90, 85, 99))
+
+calculate_mean <- function(numbers) {
+  mean(numbers)}
+
+mean_score <- calculate_mean(df$Score)
+mean_score
 ```
 
 ## Quarto
