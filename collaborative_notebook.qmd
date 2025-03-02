@@ -95,7 +95,7 @@ summary(df)
 ggplot(df, aes(x = Name, y = Score)) +
   geom_bar(stat = "identity", fill = "pink") +
   labs(title = "Scores by Name", x = "Name", y = "Score") +
-  theme_minimal()
+  theme_minimal() #edit this
 ```
 
 ```{r}
