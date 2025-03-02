@@ -42,15 +42,18 @@ format:
 2.  Stray Kids (4^th^ generation)
     1.  3RACHA (Stray Kids subunit)
 
-\[best choreography\] (<https://www.youtube.com/watch?v=FKJk2Lr7Sck>)
+click here for the \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2Lr7Sck>)
 
 <!-- hello what's up-->
 
 ```{r}
 #| label: performing set-up tasks
+#|echo: false
 library(apaquarto)
 library(tidyverse)
 library(ggplot2)
+library(knitr)
+library(kableExtra)
 
 set.seed(123)
 
@@ -63,6 +66,7 @@ data <- read_csv("data.csv") #need to make dataset
 
 ```{r}
 #| label: executing non-setup R code
+#| echo: true
 #assigned values to objects
 x <- 10
 y <- 20
@@ -80,6 +84,23 @@ calculate_mean <- function(numbers) {
 
 mean_score <- calculate_mean(df$Score)
 mean_score
+```
+
+```{r}
+#| label: descriptive analysis/hypothesis testing
+#| echo: true
+
+summary(df)
+
+ggplot(df, aes(x = Name, y = Score)) +
+  geom_bar(stat = "identity", fill = "pink") +
+  labs(title = "Scores by Name", x = "Name", y = "Score") +
+  theme_minimal()
+```
+
+```{r}
+#| label: publication quality table
+#| echo: false
 ```
 
 objectives I'm (GB) looking to meet: 22, 23, 24, 25, (26 already met), 27, 28, 29, 30
