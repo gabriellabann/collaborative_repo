@@ -70,8 +70,13 @@ data <- read_csv("data.csv")
 if (file.exists("data_preprocessing.R")) {
   source("data_preprocessing.R")
 } else {
-  print("Script file 'data_preprocessing.R' not found. Please ensure it exists in your working directory.")
-}
+  print("Script file 'data_preprocessing.R' not found. Please ensure it exists in your working directory.")}
+
+df_filtered
+
+cat("The average age of participants is", average_age, " .\n")
+
+table(df$Status)
 
 #setting default chunk options
 knitr::opts_chunk$set(
