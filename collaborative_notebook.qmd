@@ -50,20 +50,37 @@ click here for the \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2
 #| label: performing set-up tasks
 #|echo: false
 
-install.packages("apaquarto")
-library(apaquarto)
+#loading packages and libraries
+#quarto::quarto_use_template("wjschne/apaquarto", no_prompt = T)
+#install.packages("apaquarto")
+#library(apaquarto)
+#quarto not running, commenting out for now, need to fix
 library(tidyverse)
 library(ggplot2)
 library(knitr)
 library(kableExtra)
 
+#setting seed
 set.seed(123)
 
-data <- read_csv("data.csv") #need to make dataset
+#loading in data
+data <- read_csv("data.csv")
 
-#need to also source an R script
+#sourcing R script
+if (file.exists("data_preprocessing.R")) {
+  source("data_preprocessing.R")
+} else {
+  print("Script file 'data_preprocessing.R' not found. Please ensure it exists in your working directory.")
+}
 
-#not sure if properly set default chunk options...
+#setting default chunk options
+knitr::opts_chunk$set(
+  echo = TRUE,  
+  warning = FALSE, 
+  message = FALSE, 
+  fig.align = "center", 
+  fig.width = 6, 
+  fig.height = 4)
 ```
 
 ```{r}
@@ -143,6 +160,8 @@ objectives I'm (GB) looking to meet: 22, 23, 24, 25, (26 already met), 27, 28, 2
 #use knitr and quarto to produce apa7 pdf
 
 ```
+
+------------------------------------------------------------------------
 
 ## Quarto
 
