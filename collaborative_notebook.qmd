@@ -12,7 +12,7 @@ abstract: "Abstraction"
 keywords: [keya, science]
 author-note:
   disclosures:
-    conflict of interest: The author has no conflict of interest to declare.
+    conflict of interest: The author has all conflicts of interest to declare.
   gratitude: "shout out to the real ones"
 documentmode: jou
 format:
