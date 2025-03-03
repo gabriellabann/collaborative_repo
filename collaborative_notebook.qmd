@@ -10,17 +10,57 @@ author:
         #department: Department of the Social Sciences -- Psychology
 abstract: "Abstraction"
 keywords: [keya, science]
+bibliography: ["ibogaine for opiopid withdrawals.bib"]
 author-note:
   disclosures:
     conflict of interest: The author has all conflicts of interest to declare.
   gratitude: "shout out to the real ones"
 documentmode: jou
 format:
-  apaquarto-docx: default
-  apaquarto-html: default
-  apaquarto-pdf:
-    documentmode: man
+  pdf:
+    number-sections: true
 ---
+
+
+```{r}
+#| label: performing set-up tasks
+#|echo: false
+
+#loading packages and libraries
+#quarto::quarto_use_template("wjschne/apaquarto", no_prompt = T)
+#install.packages("apaquarto")
+#library(apaquarto)
+#quarto not running, commenting out for now, need to fix
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+library(kableExtra)
+
+#setting seed
+set.seed(123)
+
+#loading in data
+data <- read_csv("data.csv")
+
+#sourcing R script
+if (file.exists("data_preprocessing.R")) {
+  source("data_preprocessing.R")
+} else {
+  print("Script file 'data_preprocessing.R' not found. Please ensure it exists in your working directory.")}
+
+
+
+#setting default chunk options
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = "center",
+  fig.width = 6,
+  fig.height = 4)
+```
+
 
 # Heading 1
 
@@ -40,53 +80,13 @@ format:
 
 1.  BTS (3^rd^ generation)
 2.  Stray Kids (4^th^ generation)
-    1.  3RACHA (Stray Kids subunit)
+    1.  3RACHA (Stray Kids subunit) 
+    2. [@malcolmChangesWithdrawalCraving2018]
+    
 
 click here for the \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2Lr7Sck>)
 
 <!-- hello what's up-->
-
-```{r}
-#| label: performing set-up tasks
-#|echo: false
-
-#loading packages and libraries
-#quarto::quarto_use_template("wjschne/apaquarto", no_prompt = T)
-#install.packages("apaquarto")
-#library(apaquarto)
-#quarto not running, commenting out for now, need to fix
-library(tidyverse)
-library(ggplot2)
-library(knitr)
-library(kableExtra)
-
-#setting seed
-set.seed(123)
-
-#loading in data
-data <- read_csv("data.csv")
-
-#sourcing R script
-if (file.exists("data_preprocessing.R")) {
-  source("data_preprocessing.R")
-} else {
-  print("Script file 'data_preprocessing.R' not found. Please ensure it exists in your working directory.")}
-
-df_filtered
-
-cat("The average age of participants is", average_age, " .\n")
-
-table(df$Status)
-
-#setting default chunk options
-knitr::opts_chunk$set(
-  echo = TRUE,  
-  warning = FALSE, 
-  message = FALSE, 
-  fig.align = "center", 
-  fig.width = 6, 
-  fig.height = 4)
-```
 
 ```{r}
 #| label: executing non-setup R code
@@ -115,6 +115,12 @@ mean_score
 #| echo: true
 
 summary(df)
+
+# df_filtered
+# 
+# cat("The average age of participants is", average_age, " .\n")
+# 
+# table(df$Status)
 
 ggplot(df, aes(x = Name, y = Score)) +
   geom_bar(stat = "identity", fill = "pink") +
@@ -189,3 +195,9 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+
+# References 
+
+:::{#refs}
+:::
