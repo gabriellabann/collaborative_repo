@@ -49,6 +49,8 @@ click here for the \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2
 ```{r}
 #| label: performing set-up tasks
 #|echo: false
+
+install.packages("apaquarto")
 library(apaquarto)
 library(tidyverse)
 library(ggplot2)
