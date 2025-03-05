@@ -120,13 +120,45 @@ summary(df)
 #if needed, filtered data frame
 #df_filtered
 
-#printing the average age
-cat("The average age of participants is", average_age, " .\n")
-
 #table of score staus if needed
 #table(df$Status)
 
-#input more descriptive analysis
+#summary statistics for numeric cariables
+summary_statistics <- df %>%
+  summarise(
+    Mean_Age = mean(Age),
+    SD_Age = sd(Age),
+    mean_score = mean(Score),
+    SD_Score = sd(Score))
+
+numeric_summary %>%
+  kable("html", caption = "Summary Statistics for Numeric Variables") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+
+#summary statistics for character variables
+group_summary_statistics <- df %>%
+  c(Group) %>%
+  mutate(Proportion = n/sum(n))
+
+cat("\nSummary Statistics for Non-Numeric Variables:\n")
+print(non_numeric_summary)
+
+#printing the average and mean age
+cat("The average age of participants in this data set is", average_age, " .\n")
+
+cat(
+  "The mean age of participants in this data set is", round(mean(df$Age), 2), 
+  "years (SD =", round(sd(df$Age), 2), ").\n",
+  "The mean percent score participants recieved on the exam is", round(mean(df$Score), 2), 
+  "points (SD =", round(sd(df$Score), 2), ").\n")
+
+#printing the frequency in each course session
+cat(
+  "The frequency of participants in Group A of the course session is", non_numeric_summary$n[non_numeric_summary$Group == "A"], 
+  "(", round(non_numeric_summary$Proportion[non_numeric_summary$Group == "A"] * 100, 2), "% of the sample).\n",
+  "The frequency of participants in Group B of the course session is", non_numeric_summary$n[non_numeric_summary$Group == "B"], 
+  "(", round(non_numeric_summary$Proportion[non_numeric_summary$Group == "B"] * 100, 2), "% of the sample).\n"
+)
 ```
 
 ```{r}
@@ -160,7 +192,7 @@ ggplot(df, aes(x = Age, y = Score)) +
     title = "Relationship Between Participant Age and their Score",  
     subtitle = "Data from Made-up Participants",  
     x = "Age (in years)",  
-    y = "Score (percent)", 
+    y = "Score (%)", 
     color = "Course Section"
   ) +
   theme_minimal() +  
@@ -225,10 +257,22 @@ ggplot(df, aes(x = Name, y = Score)) +
 #| fig-cap: "Figure 3"
 #figure
 ggplot(df, aes(x = Name, y = Score)) +
-  geom_bar(stat = "identity", fill = "pink") +
-  labs(title = "Scores by Name", x = "Name", y = "Score") +
-  theme_minimal()
-#edit to be APA
+  geom_bar(stat = "identity", fill = "pink", width = 0.7) +
+  geom_text(aes(label = Score), vjust = -0.5, size = 4, color = "black") +  # Add data labels
+  labs(title = "Scores by Participant Name", x = "Participant Name", y = "Score (%)") +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "Times New Roman", size = 12),
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title.x = element_text(size = 12, face = "bold", margin = margin(t = 10)),
+    axis.title.y = element_text(size = 12, face = "bold", margin = margin(r = 10)),
+    axis.text.x = element_text(size = 10, angle = 45, hjust = 1),
+    axis.text.y = element_text(size = 10),
+    panel.grid.major = element_line(color = "gray80"),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    axis.line = element_line(color = "black")
+  )
 ```
 
 ```{r}
@@ -242,13 +286,13 @@ if (file.exists("bts_whitehouse.png")) {
   print("Image file not found.")} #"bts_whitehouse.png" in working directory
 ```
 
-The mean test score is `r mean_score` .
+The mean test score is `r round(mean_score, 2)` .
 
 The highest test score in the data set of given participants is `r max(df$Score)` .
 
-The youngest person in the data set who took the exam is `r df$Name[which.min(df$Age)]`, who is currently `r min(df$Age)` years old.
+The range of participant ages in the data set is from `r min(df$Age)` to `r max(df$Age)` years old. The median age in the data set is `r median(df$Age)` years old. The youngest person in the data set who took the exam is `r df$Name[which.min(df$Age)]`, who is currently `r min(df$Age)` years old.
 
-The data set contains `r nrow(df)` observations, meaning that `r nrow(df)` individuals took the exam; with the scores ranging from `rmin(df$Score)` to `rmax(df$Score)`.
+The data set contains `r nrow(df)` observations, meaning that `r nrow(df)` individuals took the exam; with the scores ranging from `rmin(df$Score)` to `rmax(df$Score)`. The difference between the highest achieved score and the lowest is `r max(df$Score) - min(df$Score)` percent. In regards to the course sections enrolled, there were `r sum(df$Group == "A")` in session A and `r sum(df$Group == "B")` in session B. In comparing the two groups, there was an average acore of `r round(mean(df$Score[df$Group == "A"]), 2)` in session A while session B had an average score of `r round(mean(df$Score[df$Group == "B"]), 2)` percent.
 
 **Figure 1** shows that there is a relationship between the participant's age and their test score. Further, the scores themselves are displayed by their respective participant name in **Figure 2**. More information on this data set is given in **Table 1**.
 
