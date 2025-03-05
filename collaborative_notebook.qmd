@@ -153,10 +153,10 @@ c(
 
 #printing the frequency in each course session
 c(
-  "The frequency of participants in Group A of the course session is", non_numeric_summary$n[non_numeric_summary$Group == "A"], 
-  "(", round(non_numeric_summary$Proportion[non_numeric_summary$Group == "A"] * 100, 2), "% of the sample).\n",
-  "The frequency of participants in Group B of the course session is", non_numeric_summary$n[non_numeric_summary$Group == "B"], 
-  "(", round(non_numeric_summary$Proportion[non_numeric_summary$Group == "B"] * 100, 2), "% of the sample).\n"
+  "The frequency of participants in Group A of the course session is", group_summary_statistics$n[group_summary_statistics$Group == "A"], 
+  "(", round(group_summary_statistics$Proportion[group_summary_statistics$Group == "A"] * 100, 2), "% of the sample).\n",
+  "The frequency of participants in Group B of the course session is", group_summary_statistics$n[group_summary_statistics$Group == "B"], 
+  "(", round(group_summary_statistics$Proportion[group_summary_statistics$Group == "B"] * 100, 2), "% of the sample).\n"
 )
 ```
 
