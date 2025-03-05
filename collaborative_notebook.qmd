@@ -129,8 +129,8 @@ summary_statistics <- df %>%
 
 #summary statistics for character variables #ERROR HERE
 group_summary_statistics <- df %>%
-  c("Group") %>%
-  mutate(Proportion = n/sum(n))
+  count(Group) %>%
+  mutate(Proportion = n / sum(n))
 ```
 
 
