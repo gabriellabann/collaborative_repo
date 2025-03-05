@@ -15,7 +15,7 @@ author-note:
   disclosures:
     conflict of interest: The author has all conflicts of interest to declare.
   gratitude: "shout out to the real ones"
-documentmode: jou
+#documentmode: jou
 format:
   pdf:
     number-sections: true
@@ -34,8 +34,7 @@ format:
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
-library(knitr)
-library(kableExtra)
+
 
 #setting seed
 set.seed(123)
@@ -50,7 +49,6 @@ if (file.exists("data_preprocessing.R")) {
   print("Script file 'data_preprocessing.R' not found. Please ensure it exists in your working directory.")}
 
 
-
 #setting default chunk options
 knitr::opts_chunk$set(
   echo = TRUE,
@@ -59,6 +57,7 @@ knitr::opts_chunk$set(
   fig.align = "center",
   fig.width = 6,
   fig.height = 4)
+
 ```
 
 
@@ -183,7 +182,7 @@ Quarto enables you to weave together content and executable code into a finished
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
-library(apaquarto)
+#library(apaquarto)
 1 + 1
 ```
 
