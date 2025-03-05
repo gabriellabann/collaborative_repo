@@ -19,6 +19,7 @@ author-note:
 format:
   pdf:
     number-sections: true
+    latex-engine: pdflatex
 ---
 
 # Heading 1
