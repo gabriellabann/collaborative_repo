@@ -99,6 +99,8 @@ calculate_mean <- function(numbers) {
 
 mean_score <- calculate_mean(df$Score)
 
+average_age <- mean(df$Age, na.rm = TRUE)
+
 ```
 
 # Results
