@@ -57,11 +57,12 @@ click here for the \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2
 #install.packages("apaquarto")
 #library(apaquarto)
 #quarto not running properly, commenting out for now
+install.packages("showtext")
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(kableExtra)
-
+library(showtext)
 
 #setting seed
 set.seed(123)
