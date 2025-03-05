@@ -1,6 +1,9 @@
 #external R script
 library(dplyr)
 
+
+
+processData <- function(df) {
 #creating status column
 df <- df %>%
   mutate(Status = case_when(
@@ -26,3 +29,4 @@ write_csv(df, "processed_data.csv")
 
 #printing message if script properly ran
 print("success! data preprocessing script executed")
+}
