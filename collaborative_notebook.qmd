@@ -51,7 +51,7 @@ click here for the \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2
 
 ```{r}
 #| label: performing set-up tasks
-#|echo: false
+#| include: false
 
 #loading packages and libraries
 #quarto::quarto_use_template("wjschne/apaquarto", no_prompt = T)
@@ -79,9 +79,9 @@ data <- read_csv("data.csv")
 
 ```
 
-```{r, opts_chunk$set(echo = TRUE)}
+```{r}
 #| label: executing non-setup R code
-#| echo: false
+#| include: false
 #assigned values to objects
 x <- 10
 y <- 20
@@ -108,7 +108,7 @@ average_age <- mean(df$Age, na.rm = TRUE)
 
 ```{r}
 #| label: descriptive analysis/hypothesis testing
-#| echo: false
+#| include: false
 
 summary(df)
 
@@ -163,7 +163,7 @@ c(
 
 ```{r}
 #| label: publication quality table
-#| echo: false
+#| include: false
 #| fig-cap: "Table 1"
 #table 
 df %>%
@@ -173,7 +173,7 @@ df %>%
 
 ```{r}
 #| label: publication quality figure 1
-#| echo: false
+#| include: false
 #| fig-cap: "Figure 1"
 #figure
 ggplot(df, aes(x = Age, y = Score)) +
@@ -229,7 +229,7 @@ ggplot(df, aes(x = Age, y = Score)) +
 
 ```{r}
 #| label: publication quality figure 2
-#| echo: false
+#| include: false
 #| fig-cap: "Figure 2"
 #figure
 ggplot(df, aes(x = Name, y = Score)) +
@@ -253,7 +253,7 @@ ggplot(df, aes(x = Name, y = Score)) +
 
 ```{r}
 #| label: publication quality figure 3
-#| echo: false
+#| include: false
 #| fig-cap: "Figure 3"
 #figure
 ggplot(df, aes(x = Name, y = Score)) +
@@ -292,7 +292,7 @@ The highest test score in the data set of given participants is `r max(df$Score)
 
 The range of participant ages in the data set is from `r min(df$Age)` to `r max(df$Age)` years old. The median age in the data set is `r median(df$Age)` years old. The youngest person in the data set who took the exam is `r df$Name[which.min(df$Age)]`, who is currently `r min(df$Age)` years old.
 
-The data set contains `r nrow(df)` observations, meaning that `r nrow(df)` individuals took the exam; with the scores ranging from `r min(df$Score)` to `r max(df$Score)`. The difference between the highest achieved score and the lowest is `r max(df$Score) - min(df$Score)` percent. In regards to the course sections enrolled, there were `r sum(df$Group == "A")` in session A and `r sum(df$Group == "B")` in session B. In comparing the two groups, there was an average acore of `r round(mean(df$Score[df$Group == "A"]), 2)` in session A while session B had an average score of `r round(mean(df$Score[df$Group == "B"]), 2)` percent.
+The data set contains `r nrow(df)` observations, meaning that `r nrow(df)` individuals took the exam; with the scores ranging from `r min(df$Score)` to `r max(df$Score)`. The difference between the highest achieved score and the lowest is `r max(df$Score) - min(df$Score)` percent. In regards to the course sections enrolled, there were `r sum(df$Group == "A")` in session A and `r sum(df$Group == "B")` in session B [@knuijverHallucinogenPersistingPerception2018; @malcolmChangesWithdrawalCraving2018; @nollerIbogaineTreatmentOutcomes2018]. In comparing the two groups, there was an average acore of `r round(mean(df$Score[df$Group == "A"]), 2)` in session A while session B had an average score of `r round(mean(df$Score[df$Group == "B"]), 2)` percent.
 
 **Figure 1** shows that there is a relationship between the participant's age and their test score. Further, the scores themselves are displayed by their respective participant name in **Figure 2**. More information on this data set is given in **Table 1**.
 
