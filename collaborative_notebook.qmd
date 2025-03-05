@@ -69,20 +69,20 @@ set.seed(123)
 data <- read_csv("data.csv")
 
 #sourcing R script
-if (file.exists("data_preprocessing.R")) {
+#if (file.exists("data_preprocessing.R")) {
   source("data_preprocessing.R")
-} else {
-  print("'data_preprocessing.R' not found. please make sure it exists in your working directory.")}
+#} else {
+#  print("'data_preprocessing.R' not found. please make sure it exists in your working directory.")}
 
 
 #setting default chunk options
-knitr::opts_chunk$set(
-  echo = TRUE,
-  warning = FALSE,
-  message = FALSE,
-  fig.align = "center",
-  fig.width = 6,
-  fig.height = 4)
+# knitr::opts_chunk$set(
+#   echo = TRUE,
+#   warning = FALSE,
+#   message = FALSE,
+#   fig.align = "center",
+#   fig.width = 6,
+#   fig.height = 4)
 
 ```
 
@@ -95,7 +95,7 @@ y <- 20
 z <- x + y
 
 #constucted a data frame
-df <- data.frame(
+df <- tibble(
   Name = c("Andres", "Blanca", "Carlos", "Dino", "Edgar"),
   Age = c(23, 19, 45, 33, 27),
   Score = c(90, 85, 99, 86, 94),
@@ -106,7 +106,7 @@ calculate_mean <- function(numbers) {
   mean(numbers)}
 
 mean_score <- calculate_mean(df$Score)
-mean_score
+
 ```
 
 # Results
@@ -131,29 +131,34 @@ summary_statistics <- df %>%
     mean_score = mean(Score),
     SD_Score = sd(Score))
 
-numeric_summary %>%
-  kable("html", caption = "Summary Statistics for Numeric Variables") %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+# numeric_summary %>%
+#   kable("html", caption = "Summary Statistics for Numeric Variables") %>%
+#   kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
 
-#summary statistics for character variables
+#summary statistics for character variables #ERROR HERE
 group_summary_statistics <- df %>%
   c(Group) %>%
   mutate(Proportion = n/sum(n))
+```
 
-cat("\nSummary Statistics for Non-Numeric Variables:\n")
+
+
+```{r}
+#| label: catenating
+c("\nSummary Statistics for Non-Numeric Variables:\n")
 print(non_numeric_summary)
 
 #printing the average and mean age
-cat("The average age of participants in this data set is", average_age, " .\n")
+c("The average age of participants in this data set is", average_age, " .\n")
 
-cat(
+c(
   "The mean age of participants in this data set is", round(mean(df$Age), 2), 
   "years (SD =", round(sd(df$Age), 2), ").\n",
   "The mean percent score participants recieved on the exam is", round(mean(df$Score), 2), 
   "points (SD =", round(sd(df$Score), 2), ").\n")
 
 #printing the frequency in each course session
-cat(
+c(
   "The frequency of participants in Group A of the course session is", non_numeric_summary$n[non_numeric_summary$Group == "A"], 
   "(", round(non_numeric_summary$Proportion[non_numeric_summary$Group == "A"] * 100, 2), "% of the sample).\n",
   "The frequency of participants in Group B of the course session is", non_numeric_summary$n[non_numeric_summary$Group == "B"], 
