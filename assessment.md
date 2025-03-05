@@ -211,8 +211,8 @@ Below each learning objective is a list of general expectations for meeting that
     3. Variables display in plain English (e.g., "Age (years)" not "child_age_yrs"
     4. Uses at least 1 static aesthetic (e.g., color, shape, size) that improves visual clarity without mapping to data
 
-        -   [X] Objective attempt
-        -   [ ] Unique objective attempt
+        -   [X] Objective attempt - for KC
+        -   [X] Unique objective attempt - for GB
         -   [ ] Objective met
         -   Grader comments:
 
