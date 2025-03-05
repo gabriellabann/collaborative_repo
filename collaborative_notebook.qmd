@@ -166,7 +166,7 @@ c(
 #| fig-cap: "Table 1"
 #table 
 df %>%
-  kable("html", caption = "Data Frame of Test Scores") %>%
+  kable("latex", caption = "Data Frame of Test Scores") %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
 ```
 
