@@ -21,7 +21,6 @@ format:
     number-sections: true
 ---
 
-
 ```{r}
 #| label: performing set-up tasks
 #|echo: false
@@ -60,7 +59,6 @@ knitr::opts_chunk$set(
 
 ```
 
-
 # Heading 1
 
 ## Heading 2
@@ -79,9 +77,8 @@ knitr::opts_chunk$set(
 
 1.  BTS (3^rd^ generation)
 2.  Stray Kids (4^th^ generation)
-    1.  3RACHA (Stray Kids subunit) 
-    2. [@malcolmChangesWithdrawalCraving2018]
-    
+    1.  3RACHA (Stray Kids subunit)
+    2.  [@malcolmChangesWithdrawalCraving2018]
 
 click here for the \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2Lr7Sck>)
 
@@ -195,8 +192,7 @@ You can add options to executable code like this
 
 The `echo: false` option disables the printing of code (only output is displayed).
 
+# References
 
-# References 
-
-:::{#refs}
+::: {#refs}
 :::
