@@ -138,7 +138,7 @@ group_summary_statistics <- df %>%
 ```{r}
 #| label: catenating
 c("\nSummary Statistics for Non-Numeric Variables:\n")
-print(non_numeric_summary)
+print(group_summary_statistics)
 
 #printing the average and mean age
 c("The average age of participants in this data set is", average_age, " .\n")
