@@ -17,7 +17,7 @@ CNetID: kchinnam and gabriellabann
 
 Section: 2
 
-Mini-project title: collaborative repo
+Mini-project title: group repo collaborative (with a simple .qmd inside)
 
 Submission date: 3/5/25
 
