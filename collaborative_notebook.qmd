@@ -123,7 +123,7 @@ summary(df)
 #table of score staus if needed
 #table(df$Status)
 
-#summary statistics for numeric cariables
+#summary statistics for numeric variables
 summary_statistics <- df %>%
   summarise(
     Mean_Age = mean(Age),
