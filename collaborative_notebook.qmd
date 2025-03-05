@@ -81,7 +81,7 @@ data <- read_csv("data.csv")
 
 ```{r, opts_chunk$set(echo = TRUE)}
 #| label: executing non-setup R code
-#| echo: true
+#| echo: false
 #assigned values to objects
 x <- 10
 y <- 20
@@ -108,7 +108,7 @@ average_age <- mean(df$Age, na.rm = TRUE)
 
 ```{r}
 #| label: descriptive analysis/hypothesis testing
-#| echo: true
+#| echo: false
 
 summary(df)
 
