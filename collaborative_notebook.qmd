@@ -172,7 +172,7 @@ df %>%
 ```
 
 ```{r}
-#| label: publication quality figure
+#| label: publication quality figure 1
 #| echo: false
 #| fig-cap: "Figure 1"
 #figure
@@ -228,7 +228,7 @@ ggplot(df, aes(x = Age, y = Score)) +
 ```
 
 ```{r}
-#| label: publication quality figure
+#| label: publication quality figure 2
 #| echo: false
 #| fig-cap: "Figure 2"
 #figure
@@ -252,7 +252,7 @@ ggplot(df, aes(x = Name, y = Score)) +
 ```
 
 ```{r}
-#| label: publication quality figure
+#| label: publication quality figure 3
 #| echo: false
 #| fig-cap: "Figure 3"
 #figure
