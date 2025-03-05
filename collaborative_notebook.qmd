@@ -60,6 +60,7 @@ click here for the \[best choreography\] (<https://www.youtube.com/watch?v=FKJk2
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
+library(kableExtra)
 
 
 #setting seed
