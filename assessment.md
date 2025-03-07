@@ -54,7 +54,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - for GB
         -   [X] Unique objective attempt - for KC
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments: 
 
 2.  Maintain an informative and up-to-date README.md
@@ -64,7 +64,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 3.  Integrate a GitHub repo with an R studio project, including .gitignore file
@@ -74,7 +74,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - for GB
         -   [X] Unique objective attempt - for KC
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 4.  Effectively use version control
@@ -84,7 +84,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 ### R programming
@@ -96,7 +96,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - for KC
         -   [X] Unique objective attempt - for GB
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 6.  Use arithmetic, comparison, and logical operators
@@ -139,7 +139,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - for KC
         -   [X] Unique objective attempt - for GB
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 10. Use `dplyr` and `tidyr` functions to transform data
@@ -182,7 +182,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 14. Use dynamic aesthetics to group data
@@ -191,7 +191,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 15. Use facets to create parallel plots
@@ -213,7 +213,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - for KC
         -   [X] Unique objective attempt - for GB
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 ### Data analysis
@@ -226,7 +226,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt
         -   [ ] Unique objective attempt
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 18. Perform simple hypothesis testing analyses for multiple data types
@@ -275,8 +275,8 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [x] Objective attempt - for KC
         -   [x] Unique objective attempt - for GB
-        -   [ ] Objective met
-        -   Grader comments:
+        -   [X] Objective met
+        -   Grader comments: The footnote and the hyperlink are not working though.
 
 ### Notebooks and code chunks
 
@@ -289,7 +289,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - FOR KC
         -   [X] Unique objective attempt FOR GB
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments: 
         
 23. Use code chunks to set up a quarto document
@@ -301,7 +301,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - FOR KC
         -   [X] Unique objective attempt FOR GB
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 24. Render publication-quality tables, figures, and images from code chunks
@@ -314,7 +314,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - FOR KC
         -   [X] Unique objective attempt FOR GB
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 25. Execute descriptive analyses and/or hypothesis testing in code chunks
@@ -350,7 +350,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - FOR KC
         -   [X] Unique objective attempt FOR GB
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 28. Use inline R variables to replace static text
@@ -361,7 +361,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - FOR KC
         -   [X] Unique objective attempt FOR GB
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 29. Run inline R functions to render dynamic data-dependent text
@@ -370,7 +370,7 @@ Below each learning objective is a list of general expectations for meeting that
 
         -   [X] Objective attempt - FOR KC
         -   [X] Unique objective attempt FOR GB
-        -   [ ] Objective met
+        -   [X] Objective met
         -   Grader comments:
 
 30. Use `knitr` and quarto to produce an APA7 formatted 1-click PDF manuscript
@@ -460,11 +460,11 @@ Thoughtful reflections may earn engagement points.
 
 ## Grader feedback
 
--   Grader:
--   Date:
--   Points toward unique objectives (up to 20):
--   Additional points (up to 20):
--   TA provisional engagement points (up to 10):
+-   Grader: Yuchen Jin
+-   Date: March 7, 2025
+-   Points toward unique objectives (up to 20): 10
+-   Additional points (up to 20): 7
+-   TA provisional engagement points (up to 10): 5
 -   Final approved engagement points (up to 10):
 -   Total points (up to 50):
 
