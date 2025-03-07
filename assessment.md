@@ -312,8 +312,8 @@ Below each learning objective is a list of general expectations for meeting that
     4. All tables and figures are referenced in the narrative text (e.g., Figure 1)
     5. References render without error and link to the correct table/figure in pdf/html output
 
-        -   [X] Objective attempt - FOR KC
-        -   [X] Unique objective attempt FOR GB
+        -   [ ] Objective attempt
+        -   [X] Unique objective attempt 
         -   [X] Objective met
         -   Grader comments:
 
@@ -462,8 +462,8 @@ Thoughtful reflections may earn engagement points.
 
 -   Grader: Yuchen Jin
 -   Date: March 7, 2025
--   Points toward unique objectives (up to 20): 10
--   Additional points (up to 20): 7
+-   Points toward unique objectives (up to 20): 10(GB), 3(KC)
+-   Additional points (up to 20): 7(GB), 14(KC)
 -   TA provisional engagement points (up to 10): 5
 -   Final approved engagement points (up to 10):
 -   Total points (up to 50):
